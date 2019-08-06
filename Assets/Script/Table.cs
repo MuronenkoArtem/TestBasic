@@ -32,16 +32,16 @@ public class Table : MonoBehaviour
         lag[0] = Lagranj(x, y, 0);
         lag[6] = Lagranj(x, y, 6);
 
+        //for (int i = 0; i < x.Length; i++)
+        //{
+        //    lag[i + 1] = y[i];
+
+        //}
         for (int i = 0; i < x.Length; i++)
         {
-            lag[i + 1] = y[i];
+            lag[i + 1] = Lagranj(x, y, x[i]);
 
         }
-        //for (int i = 0; i < x.Length; i++)
-        //{            
-        //    lag[i+1] = Lagranj(x,y, x[i]);
-
-        //}               
 
         LineRend(xW.Length, xW, lag, Color.red);
         
